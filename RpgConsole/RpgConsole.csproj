@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Armour\Armor.cs" />
+    <Compile Include="Entities\Battle.cs" />
     <Compile Include="Entities\GameCharacters\Character.cs" />
     <Compile Include="Entities\GameCharacters\Enemy.cs" />
     <Compile Include="Entities\GameCharacters\Player.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\DamageCalculator.cs" />
+    <Compile Include="Service\VerificationElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -20,10 +20,22 @@ namespace RpgConsole.Service
 
         public void CalculateDamage()
         {
-            int damageExtra = Attacker.Strength * 2;
-            int damageTotal = damageExtra + Attacker.AttackPower;
+            if(VerificationElement.Critical(Attacker, Target))
+            {
+                int damageExtra = Attacker.Strength * 2;
+                int damageTotal = (damageExtra + Attacker.AttackPower) * 2 ;
 
-            Target.ModifiedHp(damageTotal - (Target.Defense + Target.Strength));
+                Target.ModifiedHp(damageTotal - (Target.Defense + Target.Strength));
+
+            }
+            else
+            {
+                int damageExtra = Attacker.Strength * 2;
+                int damageTotal = damageExtra + Attacker.AttackPower;
+
+                Target.ModifiedHp(damageTotal - (Target.Defense + Target.Strength));
+            }
+          
         }
     }
 }
