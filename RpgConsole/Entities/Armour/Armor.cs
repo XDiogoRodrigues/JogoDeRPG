@@ -11,12 +11,14 @@ namespace RpgConsole.Entities.Armour
         public string Name { get;}
         public int Defense { get;}
         public int MagicDefense { get; }
+        public string Weak { get; }
 
-        public Armor(string name, int defense, int magicDefense)
+        public Armor(string name, int defense, int magicDefense, string weak)
         {
             Name = name;
             Defense = defense;
             MagicDefense = magicDefense;
+            Weak = weak;
         }
     }
 }

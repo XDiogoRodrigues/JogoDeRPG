@@ -27,6 +27,8 @@ namespace RpgConsole.Entities.GameCharacters
         {
             CharacterWeapon = weapon;
             AttackPower = weapon.Attack;
+            MagicPower = weapon.MagicPower;
+            Mp = weapon.ManaBonus;                  
         }
 
         public void EquiArmor(Armor armor)
@@ -34,6 +36,22 @@ namespace RpgConsole.Entities.GameCharacters
             CharacterArmor = armor;
             Defense = armor.Defense;
         }
+
+        public string Information()
+        {
+            StringBuilder s1 = new StringBuilder();
+            s1.AppendLine($"LV: {Lv}");
+            s1.AppendLine($"Name: {Name}");
+            s1.AppendLine($"HP: {Hp}");
+            s1.AppendLine($"MP: {Mp}");
+            s1.AppendLine($"Strength: {Strength}");
+            s1.AppendLine($"Attack Power: {AttackPower}");
+            s1.AppendLine($"Magic Power: {MagicPower}");
+            s1.AppendLine($"Defense: {Defense}");
+            return s1.ToString();
+        }
+
+
 
     }
 }

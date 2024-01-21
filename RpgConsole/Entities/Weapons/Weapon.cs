@@ -10,16 +10,19 @@ namespace RpgConsole.Entities.Weapons
     {
         public string Category { get;}
         public string Name { get;}
-        public int Refine { get; private set; }
         public int Attack { get; private set; }
+        public int MagicPower { get; private set; }
         public string Element { get;}
+        public int ManaBonus { get; }
 
-        public Weapon(string category, string name, int attack, string element)
+        public Weapon(string category, string name, int attack, int magicPower, string element, int manaBonus)
         {
             Category = category;
             Name = name;
             Attack = attack;
+            MagicPower = magicPower;
             Element = element;
+            ManaBonus = manaBonus;
         }
 
     }

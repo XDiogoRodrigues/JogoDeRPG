@@ -14,7 +14,7 @@ namespace RpgConsole.Entities.GameCharacters
         public string Name { get; private set; }
         public int Lv { get; private set; }
         public int Hp { get; private set; }
-        public int Mp { get; private set; }
+        public int Mp { get; protected set; }
         public int Strength { get; private set; }
         public int AttackPower { get; protected set; }
         public int MagicPower {get; protected set;}
@@ -49,7 +49,7 @@ namespace RpgConsole.Entities.GameCharacters
         {
             Mp -= mp;
         }  
-        protected void AttackEnemy(Character enemy)
+        public void AttackEnemy(Character enemy)
         {
             DamageCalculator Damage = new DamageCalculator(this, enemy);
             Damage.CalculateDamage();
