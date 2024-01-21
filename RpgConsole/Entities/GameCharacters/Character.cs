@@ -16,11 +16,11 @@ namespace RpgConsole.Entities.GameCharacters
         public int Hp { get; private set; }
         public int Mp { get; private set; }
         public int Strength { get; private set; }
-        public int AttackPower { get; private set; }
-        public int MagicPower {get; private set;}
-        public int Defense { get; private set; }
-        public Weapon CharacterWeapon { get; private set; }
-        public Armor CharacterArmor { get; private set; }
+        public int AttackPower { get; protected set; }
+        public int MagicPower {get; protected set;}
+        public int Defense { get; protected set; }
+        public Weapon CharacterWeapon { get; protected set; }
+        public Armor CharacterArmor { get; protected set; }
 
         public Character(string name, int lv, int hp, int mp, int strength, int attackPower, int magicPower, int defense)
         {
@@ -36,9 +36,9 @@ namespace RpgConsole.Entities.GameCharacters
         public void ModifiedLv(int lv)
         {
             Lv += lv;
-            Hp += 80;
-            Mp += 10;
-            Strength += 1;
+            Hp += 80 * lv;
+            Mp += 10 * lv;
+            Strength += 1 * lv;
         }
         public void ModifiedHp(int damage)
         {
