@@ -21,5 +21,6 @@ namespace RpgConsole.Entities.Weapons
             Attack = attack;
             Element = element;
         }
+
     }
 }
