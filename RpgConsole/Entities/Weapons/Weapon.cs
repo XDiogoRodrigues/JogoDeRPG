@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RpgConsole.Entities.Weapons
 {
-    class Weapon
+    abstract class Weapon
     {
         public string Category { get;}
         public string Name { get;}
