@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RpgConsole.Entities.Weapons;
 
 namespace RpgConsole.Entities.GameCharacters
 {
@@ -16,6 +17,7 @@ namespace RpgConsole.Entities.GameCharacters
         public int AttackPower { get; private set; }
         public int MagicPower {get; private set;}
         public Weapon CharacterWeapon { get; private set; }
+        public Armor CharacterArmor { get; private set; }
 
         public Character(string name, int lv, int hp, int mp, int strength, int attackPower, int magicPower)
         {
