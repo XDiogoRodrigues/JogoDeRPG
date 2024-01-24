@@ -48,6 +48,9 @@
     <Compile Include="Entities\GameCharacters\Character.cs" />
     <Compile Include="Entities\GameCharacters\Enemy.cs" />
     <Compile Include="Entities\GameCharacters\Player.cs" />
+    <Compile Include="Entities\Magics\BlackMagic.cs" />
+    <Compile Include="Entities\Magics\Magic.cs" />
+    <Compile Include="Entities\Magics\WhiteMagic.cs" />
     <Compile Include="Entities\Weapons\Staff.cs" />
     <Compile Include="Entities\Weapons\Sword.cs" />
     <Compile Include="Entities\Weapons\Weapon.cs" />
