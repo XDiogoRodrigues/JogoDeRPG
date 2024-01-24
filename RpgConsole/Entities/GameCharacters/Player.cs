@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RpgConsole.Entities.Weapons;
 using RpgConsole.Entities.Armour;
+using RpgConsole.Entities.Magics;
 
 namespace RpgConsole.Entities.GameCharacters
 {
@@ -12,6 +13,8 @@ namespace RpgConsole.Entities.GameCharacters
     {
         public int NextLv { get; private set; }
         public int Exp { get; set; }
+        public List<BlackMagic> listBlackMagic = new List<BlackMagic>();
+        public List<WhiteMagic> listWhiteMagic = new List<WhiteMagic>();
 
         public Player(string name, int lv, int hp, int mp, int strength, int attackPower, int magicPower, int defense) : base(name, lv, hp, mp, strength, attackPower, magicPower, defense)
         {
@@ -35,6 +38,16 @@ namespace RpgConsole.Entities.GameCharacters
         {
             CharacterArmor = armor;
             Defense = armor.Defense;
+        }
+
+        public void UseMagicWhite()
+        {
+
+        }
+
+        public void UseMagicBlack()
+        {
+
         }
 
         public string Information()
