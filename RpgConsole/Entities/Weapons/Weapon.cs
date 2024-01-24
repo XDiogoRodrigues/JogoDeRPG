@@ -25,5 +25,10 @@ namespace RpgConsole.Entities.Weapons
             ManaBonus = manaBonus;
         }
 
+        public override string ToString()
+        {
+            return $"Category: {Category}\nName: {Name}\nAttack: {Attack}\nMagicPower: {MagicPower}\nElement: {Element}\nMana Bonus: {ManaBonus}";
+        }
+
     }
 }

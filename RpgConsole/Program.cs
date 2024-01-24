@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using RpgConsole.Entities.GameCharacters;
 using RpgConsole.Entities.Weapons;
 
+
 namespace RpgConsole
 {
     class Program
     {
         static void Main(string[] args)
-        {
+        {           
         }
     }
 }
